@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pedidos</title>
+</head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sección de Pedidos - Restaurante</title>
+    <style>
+        :root {
+            --color-principal: #1b8daf; /* Naranja gastronómico */
+            --color-oscuro: #2c3e50;
+            --color-claro: #f9f9f9;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            color: var(--color-oscuro);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .contenedor-pedido {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .contenedor-pedido h2 {
+            text-align: center;
+            color: var(--color-principal);
+            margin-bottom: 25px;
+            font-size: 1.8rem;
+        }
+
+        .grupo-formulario {
+            margin-bottom: 18px;
+        }
+
+        .grupo-formulario label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .grupo-formulario input, 
+        .grupo-formulario select, 
+        .grupo-formulario textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .grupo-formulario input:focus, 
+        .grupo-formulario select:focus, 
+        .grupo-formulario textarea:focus {
+            outline: none;
+            border-color: var(--color-principal);
+        }
+
+        .fila-doble {
+            display: flex;
+            gap: 15px;
+        }
+
+        .fila-doble .grupo-formulario {
+            flex: 1;
+        }
+
+        .btn-pedido {
+            width: 100%;
+            background-color: var(--color-principal);
+            color: white;
+            border: none;
+            padding: 12px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .btn-pedido:hover {
+            background-color: #00d3b0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="contenedor-pedido">
+    <h2>Realiza tu Pedido</h2>
+    
+    <form action="#" method="POST">
+        
+        <div class="grupo-formulario">
+            <label for="nombre">Nombre Completo</label>
+            <input type="text" id="nombre" name="nombre_usuario" placeholder="Ej. pepito Pérez" required>
+        </div>
+
+        <div class="grupo-formulario">
+            <label for="telefono">Número de Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="Ej. +312 4567890" required>
+        </div>
+
+        <div class="fila-doble">
+            <div class="grupo-formulario" style="flex: 2;">
+                <label for="producto">Selecciona tu Platillo</label>
+                <select id="producto" name="producto" required>
+                    <option value="" disabled selected>Elige un producto...</option>
+                    <option value="hamburguesa">POSTRE 3 LECHES</option>
+                    <option value="pizza">POLLO CON ARROZ</option>
+                    <option value="tacos">RABIAR CON BLANQUILLOS</option>
+                    <option value="ensalada">MENU INFANTIL</option>
+                </select>
+            </div>
+
+            <div class="grupo-formulario" style="flex: 1;">
+                <label for="cantidad">Cantidad</label>
+                <input type="number" id="cantidad" name="cantidad" min="1" max="10" value="1" required>
+            </div>
+        </div>
+
+        <div class="grupo-formulario">
+            <label for="direccion">Dirección de Entrega</label>
+            <textarea id="direccion" name="direccion" rows="3" placeholder="Calle, número, apartamento y referencias..." required></textarea>
+        </div>
+
+        <div class="grupo-formulario">
+            <label for="pago">Método de Pago</label>
+            <select id="pago" name="metodo_pago" required>
+                <option value="efectivo">Efectivo (Pagas al recibir)</option>
+                <option value="tarjeta">Tarjeta de Crédito / Débito</option>
+                <option value="transferencia">Transferencia Bancaria / App Móvil</option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn-pedido">Confirmar Pedido</button>
+
+    </form>
+</div>
+
+</body>
+</html>
