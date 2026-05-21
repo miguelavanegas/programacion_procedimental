@@ -10,96 +10,109 @@
     <title>contabilidad</title>
 </head>
 <body>
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 
-<section class="section">
-    <div class="colum is-one-quarter">
-        <anside class="menu">
-            <img src="https://cdn-icons-png.flaticon.com/128/6676/6676016.png" alt="">
-        </anside>
-    </div>
-
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-half">
-        
-        <div class="box">
-          <h1 class="title has-text-centered has-text-info">CONTABILIDAD</h1>
-          <hr>
-
-          <div class="field">
-            <label class="label">Ventas</label>
-            <div class="control has-icons-left">
-              <input class="input is-info" type="number" placeholder="Ej: 20">
-              <span class="icon is-small is-left">
-                <i class="fas fa-search-dollar"></i>
-              </span>
-            </div>
-          </div>
-
-          <div class="field">
-            <label class="label">fecha</label>
-            <div class="control has-icons-left">
-              <input class="input is-info" type="date" placeholder="Nombre del artículo">
-              <span class="icon is-small is-left">
-                <i class="fas fa-calendar-alt"></i>
-              </span>
-            </div>
-          </div>
-
-          <div class="columns">
-            <div class="column">
-              <div class="field">
-                <label class="label">Ingresos</label>
-                <div class="control">
-                  <input class="input is-info" type="number" placeholder="$">
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                
+                <div class="column is-one-quarter">
+                    <div class="box has-text-centered">
+                        <figure class="image is-128x128 is-inline-block">
+                            <img class="is-rounded" src="https://cdn-icons-png.flaticon.com/128/6676/6676016.png" alt="User Avatar">
+                        </figure>
+                        <div class="mt-4">
+                            <p class="title is-5">Admin Contable</p>
+                            <p class="subtitle is-6">@usuario_finanzas</p>
+                        </div>
+                        <hr>
+                        <aside class="menu has-text-left">
+                            <p class="menu-label">General</p>
+                            <ul class="menu-list">
+                                <li><a class="is-active"><span class="icon"><i class="fas fa-home"></i></span> Panel</a></li>
+                                <li><a><span class="icon"><i class="fas fa-history"></i></span> Historial</a></li>
+                            </ul>
+                            <p class="menu-label">Configuración</p>
+                            <ul class="menu-list">
+                                <li><a><span class="icon"><i class="fas fa-user-cog"></i></span> Perfil</a></li>
+                                <li><a class="has-text-danger"><span class="icon"><i class="fas fa-sign-out-alt"></i></span> Salir</a></li>
+                            </ul>
+                        </aside>
+                    </div>
                 </div>
-              </div>
-            </div>
-            <div class="column">
-              <div class="field">
-                <label class="label">Egresos</label>
-                <div class="control">
-                  <input class="input is-info" type="number" placeholder="$">
-                </div>
-              </div>
-            </div>
-          </div>
 
-                    <div class="columns">
-            <div class="column">
-              <div class="field">
-                <label class="label">Concepto</label>
-                <div class="control">
-                  <input class="input is-info" type="text" placeholder="porque salio">
-                </div>
-              </div>
-            </div>
-            <div class="column">
-              <div class="field">
-                <label class="label">Valor</label>
-                <div class="control">
-                  <input class="input is-info" type="number" placeholder="$">
-                </div>
-              </div>
-            </div>
-          </div>
+                <div class="column">
+                    <div class="box">
+                        <h1 class="title has-text-centered has-text-info">CONTABILIDAD</h1>
+                        <hr>
 
-          <div class="field mt-5">
-            <div class="control">
-              <button class="button is-info is-fullwidth is-rounded">
-                <span class="icon"><i class="fas fa-save"></i></span>
-                <span>Guardar Producto</span>
-              </button>
-            </div>
-          </div>
+                        <div class="field">
+                            <label class="label">Ventas</label>
+                            <div class="control has-icons-left">
+                                <input class="input is-info" type="number" placeholder="Ej: 20">
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-search-dollar"></i>
+                                </span>
+                            </div>
+                        </div>
 
-        </div> </div>
-    </div>
-  </div>
-</section>
-    
+                        <div class="field">
+                            <label class="label">Fecha</label>
+                            <div class="control has-icons-left">
+                                <input class="input is-info" type="date">
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-calendar-alt"></i>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="columns">
+                            <div class="column">
+                                <div class="field">
+                                    <label class="label">Ingresos</label>
+                                    <div class="control">
+                                        <input class="input is-info" type="number" placeholder="$">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="field">
+                                    <label class="label">Egresos</label>
+                                    <div class="control">
+                                        <input class="input is-info" type="number" placeholder="$">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="columns">
+                            <div class="column is-two-thirds">
+                                <div class="field">
+                                    <label class="label">Concepto</label>
+                                    <div class="control">
+                                        <input class="input is-info" type="text" placeholder="¿Por qué salió el dinero?">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="field">
+                                    <label class="label">Valor</label>
+                                    <div class="control">
+                                        <input class="input is-info" type="number" placeholder="$">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="field mt-5">
+                            <div class="control">
+                                <button class="button is-info is-fullwidth is-rounded">
+                                    <span class="icon"><i class="fas fa-save"></i></span>
+                                    <span>Guardar Registro</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div> </div> </div> </div> </section>
 </body>
 </html>
