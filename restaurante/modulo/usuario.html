@@ -11,6 +11,8 @@
 </head>
 <body>
 
+  <script src="../js/usuario.js"></script>
+
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 
@@ -32,7 +34,7 @@
               <div class="field">
                 <label class="label">Nombre</label>
                 <div class="control">
-                  <input class="input" type="text" placeholder="Ej: Juan">
+                  <input id="nombre" class="input" type="text" placeholder="Ej: Juan">
                 </div>
               </div>
             </div>
@@ -40,7 +42,7 @@
               <div class="field">
                 <label class="label">Apellidos</label>
                 <div class="control">
-                  <input class="input" type="text" placeholder="Ej: Pérez">
+                  <input id="apellidos" class="input" type="text" placeholder="Ej: Pérez">
                 </div>
               </div>
             </div>
@@ -52,7 +54,7 @@
                 <label class="label">País</label>
                 <div class="control has-icons-left">
                   <div class="select is-fullwidth">
-                    <select>
+                    <select id="pais">
                       <option disabled selected>Selecciona</option>
                       <option>COL (+57)</option>
                       <option>USA (+1)</option>
@@ -68,7 +70,7 @@
               <div class="field">
                 <label class="label">Teléfono</label>
                 <div class="control">
-                  <input class="input" type="number" placeholder="300 000 0000">
+                  <input id="telefono" class="input" type="number" placeholder="300 000 0000">
                 </div>
               </div>
             </div>
@@ -80,7 +82,7 @@
                 <label class="label">Tipo ID</label>
                 <div class="control">
                   <div class="select is-fullwidth">
-                    <select>
+                    <select id="documeto">
                       <option>C.C</option>
                       <option>T.I</option>
                       <option>VISA</option>
@@ -93,7 +95,7 @@
               <div class="field">
                 <label class="label">Número de Documento</label>
                 <div class="control">
-                  <input class="input" type="number" placeholder="123456789">
+                  <input id="numero_documento" class="input" type="number" placeholder="123456789">
                 </div>
               </div>
             </div>
@@ -103,6 +105,7 @@
             <div class="column">
               <div class="field">
                 <label class="label">Fecha Nacimiento</label>
+                <input id="nacimiento" class="input" type="date">
 
 </body>
 </html>

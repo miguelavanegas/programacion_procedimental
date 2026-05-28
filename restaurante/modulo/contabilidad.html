@@ -10,6 +10,9 @@
     <title>contabilidad</title>
 </head>
 <body>
+
+<script src="../js/contabilidad.js"></script>
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 
@@ -50,7 +53,7 @@
                         <div class="field">
                             <label class="label">Ventas</label>
                             <div class="control has-icons-left">
-                                <input class="input is-info" type="number" placeholder="Ej: 20">
+                                <input id="ventas" class="input is-info" type="number" placeholder="Ej: 20">
                                 <span class="icon is-small is-left">
                                     <i class="fas fa-search-dollar"></i>
                                 </span>
@@ -60,7 +63,7 @@
                         <div class="field">
                             <label class="label">Fecha</label>
                             <div class="control has-icons-left">
-                                <input class="input is-info" type="date">
+                                <input id="fecha" class="input is-info" type="date">
                                 <span class="icon is-small is-left">
                                     <i class="fas fa-calendar-alt"></i>
                                 </span>
@@ -72,7 +75,7 @@
                                 <div class="field">
                                     <label class="label">Ingresos</label>
                                     <div class="control">
-                                        <input class="input is-info" type="number" placeholder="$">
+                                        <input id="ingresos" class="input is-info" type="number" placeholder="$">
                                     </div>
                                 </div>
                             </div>
@@ -80,7 +83,7 @@
                                 <div class="field">
                                     <label class="label">Egresos</label>
                                     <div class="control">
-                                        <input class="input is-info" type="number" placeholder="$">
+                                        <input id="egresos" class="input is-info" type="number" placeholder="$">
                                     </div>
                                 </div>
                             </div>
@@ -91,7 +94,7 @@
                                 <div class="field">
                                     <label class="label">Concepto</label>
                                     <div class="control">
-                                        <input class="input is-info" type="text" placeholder="¿Por qué salió el dinero?">
+                                        <input id="concepto" class="input is-info" type="text" placeholder="¿Por qué salió el dinero?">
                                     </div>
                                 </div>
                             </div>
@@ -99,7 +102,7 @@
                                 <div class="field">
                                     <label class="label">Valor</label>
                                     <div class="control">
-                                        <input class="input is-info" type="number" placeholder="$">
+                                        <input id="valor" class="input is-info" type="number" placeholder="$">
                                     </div>
                                 </div>
                             </div>
@@ -114,5 +117,6 @@
                             </div>
                         </div>
                     </div> </div> </div> </div> </section>
-</body>
+
+ </body>
 </html>
