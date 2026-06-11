@@ -18,11 +18,11 @@ function validarFormulario() {
 
     if (TieneNumeros(nombre) || TieneNumeros(apellidos)) {
         console.log("El nombre y los apellidos no pueden contener números.");
-    }
+    } else
     
     if (telefono.length () == 10) {
         console.log("Maximo 10 numeros.");
-    }
+    } else
 
     if (numero_documento.length () == 10) {
         console.log("Maximo 10 numeros.");
@@ -30,6 +30,7 @@ function validarFormulario() {
     
 else {
 console.log("enviado correctamente.");
+return true;
     }
     
 }
