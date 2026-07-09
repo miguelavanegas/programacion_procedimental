@@ -13,7 +13,11 @@ function validarFormulario() {
 
         function solonumeros() {
             let regex = /^\d+$/;
-            return regex.test(ventas) && regex.test(ingresos) && regex.test(egresos) && regex.test(valor);
+            if (regex.test(ventas) && regex.test(ingresos) && regex.test(egresos) && regex.test(valor)) {
+                console.log("Los campos de ventas, ingresos, egresos y valor contienen solo números.");
+            } else {
+                console.log("Los campos de ventas, ingresos, egresos y valor deben contener solo números.");
+            }
         }
 
     return true;

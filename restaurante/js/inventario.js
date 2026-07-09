@@ -11,12 +11,20 @@ function validarFormulario() {
 
         function solonumeros() {
             let regex = /^\d+$/;
-            return regex.test(codigo) && regex.test(cantidad);
+            if (regex.test(codigo) && regex.test(cantidad)) {
+                console.log("Los campos de código y cantidad contienen solo números.");
+            } else {
+                console.log("Los campos de código y cantidad deben contener solo números.");
+            }
         }
 
         function sololetras() {
-            let regex = /\d/;
-            return regex.test(nombre_producto) && regex.test(marca);
+            let regex = /^[a-zA-Z]+$/;
+            if (regex.test(nombre_producto) && regex.test(marca)) {
+                console.log("Los campos de nombre del producto y marca contienen solo letras.");
+            } else {
+                console.log("Los campos de nombre del producto y marca deben contener solo letras.");
+            }
         }
 
     return true;
