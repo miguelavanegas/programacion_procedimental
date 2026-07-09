@@ -24,5 +24,6 @@ return true;
         return regex.test(numero) && regex.test(cantidad);
     }
 
-
 }
+
+document.getElementById("btnConfirmar").onclick = ConfirmarPedido;

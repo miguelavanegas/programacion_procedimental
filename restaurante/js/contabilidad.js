@@ -22,3 +22,5 @@ function validarFormulario() {
 
     return true;
 }
+
+document.getElementById("btnGuardar").onclick = GuardarRegistro;

@@ -34,3 +34,5 @@ return true;
     }
     
 }
+
+document.getElementById("btnConfirmar").onclick = ConfirmarUsuario;
