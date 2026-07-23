@@ -1,89 +1,117 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css"
     />
     <title>inventario</title>
-</head>
-<body>
-
-
-
-<div style="position: absolute; top: 20px; z-index: 999;">
-    <a href="/restaurante/index.html" class="button is-info">
-      Ir al inicio
-    </a>
-  </div>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-
-<section class="section">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-half">
-        
-        <div class="box">
-          <h1 class="title has-text-centered has-text-info">Registro de Producto</h1>
-          <hr>
-
-          <div class="field">
-            <label class="label">Código</label>
-            <div class="control has-icons-left">
-              <input id="codigo" class="input is-info" type="number" placeholder="Ej: 1010">
-              <span class="icon is-small is-left">
-                <i class="fas fa-barcode"></i>
-              </span>
-            </div>
-          </div>
-
-          <div class="field">
-            <label class="label">Nombre del Producto</label>
-            <div class="control has-icons-left">
-              <input id="nombre_producto" class="input is-info" type="text" placeholder="Nombre del artículo">
-              <span class="icon is-small is-left">
-                <i class="fas fa-box"></i>
-              </span>
-            </div>
-          </div>
-
-          <div class="columns">
-            <div class="column">
-              <div class="field">
-                <label class="label">Cantidad</label>
-                <div class="control">
-                  <input id="cantidad" class="input is-info" type="number" placeholder="0">
-                </div>
-              </div>
-            </div>
-            <div class="column">
-              <div class="field">
-                <label class="label">Marca</label>
-                <div class="control">
-                  <input id="marca" class="input is-info" type="text" placeholder="Marca">
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="field mt-5">
-            <div class="control">
-              <button id="btnGuardar" class="button is-info is-fullwidth is-rounded">
-                <span class="icon"><i class="fas fa-save"></i></span>
-                <span>GuardarProducto</span>
-              </button>
-            </div>
-          </div>
-
-        </div> </div>
+  </head>
+  <body>
+    <div style="position: absolute; top: 20px; z-index: 999">
+      <a href="/restaurante/index.html" class="button is-info">
+        Ir al inicio
+      </a>
     </div>
-  </div>
-</section>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
+    ></script>
 
-<script src="../js/contabilidad.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-</body>
+    <section class="section">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-half">
+            <div class="box">
+              <h1 class="title has-text-centered has-text-info">
+                Registro de Producto
+              </h1>
+              <hr />
+
+              <div class="field">
+                <label class="label">Codigo</label>
+                <div class="control has-icons-left">
+                  <input
+                    id="codigo"
+                    class="input is-info"
+                    type="number"
+                    placeholder="Ej: 1010"
+                  />
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-barcode"></i>
+                  </span>
+                </div>
+              </div>
+
+              <div class="field">
+                <label class="label">Nombre del Producto</label>
+                <div class="control has-icons-left">
+                  <input
+                    id="nombre_producto"
+                    class="input is-info"
+                    type="text"
+                    placeholder="Nombre del artículo"
+                  />
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-box"></i>
+                  </span>
+                </div>
+              </div>
+
+              <div class="columns">
+                <div class="column">
+                  <div class="field">
+                    <label class="label">Cantidad</label>
+                    <div class="control">
+                      <input
+                        id="cantidad"
+                        class="input is-info"
+                        type="number"
+                        placeholder="0"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="column">
+                  <div class="field">
+                    <label class="label">Marca</label>
+                    <div class="control">
+                      <input
+                        id="marca"
+                        class="input is-info"
+                        type="text"
+                        placeholder="Marca"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="field mt-5">
+                <div class="control">
+                  <button
+                    id="btnGuardar"
+                    type="button"
+                    class="button is-info is-fullwidth is-rounded"
+                  >
+                    <span class="icon"><i class="fas fa-save"></i></span>
+                    <span>GuardarProducto</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="../js/inventario.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
 </html>

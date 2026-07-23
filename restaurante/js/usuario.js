@@ -1,38 +1,62 @@
-let nombre = document.getElementById("nombre").value;
-let apellidos = document.getElementById("apellidos").value;
-let pais = document.getElementById("pais").value;
-let pago = document.getElementById("pago").value;
-let telefono = document.getElementById("telefono").value;
-let documento = document.getElementById("documento").value;
-let numero_documento = document.getElementById("numero_documento").value;
-let nacimiento = document.getElementById("nacimiento").value;
-
 function validarFormulario() {
-    if (nombre == "" || apellidos == "" || pais == "" || pago == "" || telefono == "" || documento == "" || numero_documento === "" || nacimiento === "") {
-        console.log("Por favor, complete todos los campos del formulario.");
-        return false;
+    let nombre = document.getElementById("nombre").value;
+    let apellidos = document.getElementById("apellidos").value;
+    let pais = document.getElementById("pais").value;
+    let telefono = document.getElementById("telefono").value;
+    let numero_documento = document.getElementById("numero_documento").value;
+    let nacimiento = document.getElementById("nacimiento").value;
+
+
+    if (!nombre || !apellidos || !pais || !telefono || !numero_documento || !nacimiento) {
+        Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "Por favor, complete todos los campos del formulario.",
+            showConfirmButton: false,
+            timer: 1500
+        });
     }
 
-        const regex = /\d/;
-    return regex.test(texto);
+    else {
+        let regex = /^[a-zA-Z]+$/;
+        if (!regex.test(nombre) && !regex.test(apellidos)) {
+            console.log("Los campos de nombre y apellidos contienen solo letras.");
+            Swal.fire({
+                position: "top-end",
+                icon: "success",
+                title: "sus datos solo puden contener letras",
+                showConfirmButton: false,
+                timer: 1500
+            });
+            return;
+        }
+        
+        {
+            let regex = /^\d+$/;
+            if (!regex.test(telefono) && !regex.test(numero_documento)) {
+                console.log("Los campos de teléfono y número de documento deben contener solo números.");
+                Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: "sus datos solo puden contener numeros",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+                return false;
+            }
+        }
 
-    if (TieneNumeros(nombre) || TieneNumeros(apellidos)) {
-        console.log("El nombre y los apellidos no pueden contener números.");
-    } else
-    
-    if (telefono.length () == 10) {
-        console.log("Maximo 10 numeros.");
-    } else
+        Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "sus datos fueron guardados de manera correcta",
+            showConfirmButton: false,
+            timer: 1500
+        });
+    }
 
-    if (numero_documento.length () == 10) {
-        console.log("Maximo 10 numeros.");
-    }
-    
-else {
-console.log("enviado correctamente.");
-return true;
-    }
-    
+
+
 }
 
-document.getElementById("btnConfirmar").onclick = ConfirmarUsuario;
+document.getElementById("btnGuardar").onclick = validarFormulario;

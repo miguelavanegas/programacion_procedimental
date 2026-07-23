@@ -10,9 +10,11 @@
     <title>USUARIO</title>
 </head>
 <body>
-
- 
-
+        <div style="position: absolute; top: 20px; z-index: 999">
+      <a href="/restaurante/index.html" class="button is-info">
+        Ir al inicio
+      </a>
+    </div>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 
@@ -110,14 +112,18 @@
             </div>
           </div>
 
-          <div class="field mt-5">
-            <div class="control">
-              <button id="btnConfirmar" type="submit" class="button is-info is-fullwidth is-rounded">
-                <span class="icon"><i class="fas fa-check"></i></span>
-                <span>ConfirmarUsuario</span>
-              </button>
-            </div>
-          </div>
+              <div class="field mt-5">
+                <div class="control">
+                  <button
+                    id="btnGuardar"
+                    type="button"
+                    class="button is-info is-fullwidth is-rounded"
+                  >
+                    <span class="icon"><i class="fas fa-save"></i></span>
+                    <span>GuardarRegistro</span>
+                  </button>
+                </div>
+              </div>
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
  <script src="../js/usuario.js"></script>
